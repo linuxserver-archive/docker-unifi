@@ -5,7 +5,7 @@ MAINTAINER Sparklyballs <sparklyballs@linuxserver.io>
 ENV APTLIST="openjdk-7-jre-headless unifi"
 
 # install packages
-RUN echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" >> /etc/apt/sources.list && \
+RUN echo "deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti" >> /etc/apt/sources.list && \
 echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list && \
 apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
 apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10 && \
