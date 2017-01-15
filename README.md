@@ -16,7 +16,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 The UniFi® Controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. [Unifi](https://www.ubnt.com/enterprise/#unifi)
 
-[![unifi](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi-banner.png)][unifiurl]
+[![unifi](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi_svg.svg)][unifiurl]
 [unifiurl]: https://www.ubnt.com/enterprise/#unifi
 
 ## Usage
@@ -36,7 +36,7 @@ docker create \
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
@@ -75,7 +75,7 @@ The webui is at https://ip:8443 , setup with the first run wizard.
 * To monitor the logs of the container in realtime: `docker logs -f unifi`
 
 
-* container version number 
+* container version number
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' unifi`
 
@@ -86,6 +86,7 @@ The webui is at https://ip:8443 , setup with the first run wizard.
 
 ## Versions
 
++ **15.01.17:** Update UniFi logo in README.
 + **14.10.16:** Add version layer information.
 + **20.09.16** Bump to pick up ver 5.27.
 + **10.09.16** Add layer badges to README.
