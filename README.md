@@ -12,8 +12,11 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
-# linuxserver/unifi
+# linuxserver/unifi Unstable Branch
 [![](https://images.microbadger.com/badges/version/linuxserver/unifi.svg)](https://microbadger.com/images/linuxserver/unifi "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/unifi.svg)](https://microbadger.com/images/linuxserver/unifi "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/unifi.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/unifi.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-unifi)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-unifi/)
+
+**This is the unstable branch it will be updated only when the downloads are updated on the following page:**
+[Ubiquiti Networks - Downloads](https://www.ubnt.com/download/unifi/)
 
 The UniFi® Controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. [Unifi](https://www.ubnt.com/enterprise/#unifi)
 
