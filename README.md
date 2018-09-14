@@ -101,6 +101,7 @@ Use `ubnt` as the password to login and `$address` is the IP address of the host
 
 ## Versions
 
++ **14.10.18:** Update to 5.8.30.
 + **19.02.18:** Add port 6789 to support throughput test
 + **09.02.18:** Update to 5.6.30.
 + **08.02.18:** Use loop to simplify symlinks.
