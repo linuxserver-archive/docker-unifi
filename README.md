@@ -115,6 +115,7 @@ When using a Security Gateway (router) it could be that network connected device
 
 ## Versions
 
++ **27.01.19:** Adding pipeline logic and multi arch.
 + **14.09.18:** Update to 5.6.40.
 + **06.07.18:** Update to 5.6.39.
 + **26.04.18:** Update to 5.6.37.
