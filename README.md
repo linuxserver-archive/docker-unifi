@@ -15,7 +15,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 # linuxserver/unifi
 [![](https://images.microbadger.com/badges/version/linuxserver/unifi.svg)](https://microbadger.com/images/linuxserver/unifi "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/unifi.svg)](https://microbadger.com/images/linuxserver/unifi "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/unifi.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/unifi.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-unifi)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-unifi/)
 
-The UniFi® Controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. [Unifi](https://www.ubnt.com/enterprise/#unifi)
+The [UniFi®](https://www.ubnt.com/enterprise/#unifi) Controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
 
 [![unifi](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi-banner.png)][appurl]
 
@@ -36,6 +36,15 @@ docker create \
   -p 6789:6789 \
   linuxserver/unifi
 ```
+
+Using tags, you can choose between either the latest "LTS Stable" branch (the default, no tag required) or the "Unstable" branch of UniFi. See the UniFi [FAQ Page](https://help.ubnt.com/hc/en-us/articles/360008240754#1) for a breakdown of their various branches.
+
+Add one of the tags, if required, to the linuxserver/unifi line of the run/create command in the following format, linuxserver/unifi:unstable
+
+#### Tags
+
++ **latest** : releases from the 5.6.x "LTS Stable" branch
++ **unstable** : releases from the 5.9.x "Unstable" branch.
 
 ## Parameters
 
@@ -72,9 +81,11 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application
 
-The webui is at https://ip:8443 , setup with the first run wizard.
+The webui is at https://ip:8443, setup with the first run wizard.
 
-To adopt a Unifi Access Point, and get it to show up in the software, take these steps:
+For Unifi to adopt other devices, e.g. an Access Point, it is required to change the inform ip address. Because Unifi runs inside Docker by default it uses an ip address not accessable by other devices. To change this go to Settings > Controller > Controller Settings and set the Controller Hostname/IP to an ip address accessable by other devices.
+
+Alternatively to manually adopt a device take these steps:
 
 ```
 ssh ubnt@$AP-IP
@@ -83,6 +94,10 @@ set-inform http://$address:8080/inform
 ```
 
 Use `ubnt` as the password to login and `$address` is the IP address of the host you are running this container on and `$AP-IP` is the Access Point IP address.
+
+## Common problems
+
+When using a Security Gateway (router) it could be that network connected devices are unable to obtain an ip address. This can be fixed by setting "DHCP Gateway IP", under Settings > Networks > network_name, to a correct (and accessable) ip address.
 
 ## Info
 
@@ -98,9 +113,14 @@ Use `ubnt` as the password to login and `$address` is the IP address of the host
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/unifi`
 
-
 ## Versions
 
++ **27.01.19:** Adding pipeline logic and multi arch.
++ **14.09.18:** Update to 5.6.40.
++ **06.07.18:** Update to 5.6.39.
++ **26.04.18:** Update to 5.6.37.
++ **24.03.18:** Update to 5.6.36.
++ **14.03.18:** Add unstable branch for 5.7x releases.
 + **19.02.18:** Add port 6789 to support throughput test
 + **09.02.18:** Update to 5.6.30.
 + **08.02.18:** Use loop to simplify symlinks.
