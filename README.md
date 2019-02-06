@@ -37,14 +37,14 @@ docker create \
   linuxserver/unifi
 ```
 
-Using tags, you can choose between either the latest "LTS Stable" branch (the default, no tag required) or the "Unstable" branch of UniFi. See the UniFi [FAQ Page](https://help.ubnt.com/hc/en-us/articles/360008240754#1) for a breakdown of their various branches.
+Using tags, you can choose between either the latest "LTS Stable" branch (the default, no tag required, as well as the `stable` tag) or the "Stable" branch of UniFi (using the `unstable` tag). See the UniFi [FAQ Page](https://help.ubnt.com/hc/en-us/articles/360008240754#1) for a breakdown of their various branches.
 
 Add one of the tags, if required, to the linuxserver/unifi line of the run/create command in the following format, linuxserver/unifi:unstable
 
 #### Tags
 
 + **latest** : releases from the 5.6.x "LTS Stable" branch
-+ **unstable** : releases from the 5.9.x "Unstable" branch.
++ **unstable** : releases from the 5.9.x "Stable" branch.
 
 ## Parameters
 
